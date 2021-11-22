@@ -21,7 +21,7 @@ pipeline{
 		  stage('Deploy') {
 
 			steps {
-				sh 'docker run -d --name apache_deploy -p 8082:80 sm0961/alpha:v1'
+				sh 'docker run -d --name apache_deploy -p 8082:80 sm0961/alpha:v9'
 			}
 		 }
       
