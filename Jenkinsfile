@@ -7,7 +7,7 @@ pipeline{
 		key = 'BUILD_VERSION'
 		
 	}
-		stage('Login') {
+		stages('Login') {
 
 			steps {
 				sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
