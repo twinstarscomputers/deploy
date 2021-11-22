@@ -16,7 +16,7 @@ pipeline{
 			}
 		}
 	}	
-	stages {
+	
 
 		stage('Deploy') {
 
@@ -25,7 +25,7 @@ pipeline{
 			}
 		}
 
-	}
+	
 
 	post {
 		always {
