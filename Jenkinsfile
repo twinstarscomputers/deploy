@@ -14,17 +14,18 @@ pipeline{
 			steps {
 				sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
 			}
-		}
+		 }
 		
 	
 
-		 stage('Deploy') {
+		  stage('Deploy') {
 
 			steps {
 				sh 'docker run -d --name apache_deploy -p 8082:80 sm0961/alpha:v1'
 			}
-		}
-
+		 }
+      
+	}
 	
 
 	post {
@@ -32,6 +33,4 @@ pipeline{
 			sh 'docker logout'
 		}
 	}
-	}
-
 }
